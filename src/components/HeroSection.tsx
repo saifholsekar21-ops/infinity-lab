@@ -34,8 +34,17 @@ export default function HeroSection({ onContactClick, onNavClick }: HeroSectionP
         className="w-full flex justify-between items-center px-6 md:px-10 pt-6 md:pt-8 z-30"
       >
         <div className="w-full flex justify-between items-center gap-4">
+          <motion.div 
+            className="flex items-center"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          >
+            <img src="/logo.png" alt="Infinity Labs Logo" className="h-10 w-10 md:h-14 md:w-14 rounded-full object-cover mr-6" />
+          </motion.div>
+
           {/* Nav links */}
-          <div className="flex gap-4 sm:gap-8 md:gap-12">
+          <div className="flex flex-wrap gap-4 sm:gap-8 md:gap-12 flex-1 justify-center md:justify-start">
             <button
               onClick={() => onNavClick("about")}
               className="text-xs sm:text-base md:text-lg lg:text-[1.3rem] font-medium uppercase tracking-wider text-[var(--text-color)] hover:opacity-70 transition-opacity duration-200 cursor-pointer"

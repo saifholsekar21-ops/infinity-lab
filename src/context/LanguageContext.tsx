@@ -28,7 +28,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // About Section
     aboutHeading: "About me",
-    aboutText: "INFINITY LABS is a modern creative digital studio focused on building high-performance, 3D-animated websites and scalable digital experiences for startups, companies, and growing brands. Our approach blends clean UI/UX, immersive animations, and robust full-stack development to create websites that don't just look premium, but perform and convert.",
+    aboutText: "INFINITY LABS is a modern creative digital studio founded by Saif Holsekar, focused on building high-performance, 3D-animated websites and scalable digital experiences for startups, companies, and growing brands. Our approach blends clean UI/UX, immersive animations, and robust full-stack development to create websites that don't just look premium, but perform and convert.",
     teamTitle: "TEAM COMPOSITION",
     teamDesc: "We are a 4-member powerhouse team combining 3 skilled web developers and 1 social media advertiser, uniting design, tech, motion, and hyper-targeted growth strategy.",
     philosophyTitle: "STUDIO PHILOSOPHY",
@@ -99,7 +99,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // About Section
     aboutHeading: "Sobre nosotros",
-    aboutText: "INFINITY LABS es un estudio creativo digital moderno especializado en construir sitios web interactivos de alto rendimiento y experiencias digitales escalables para empresas emergentes, corporaciones y marcas en crecimiento. Unimos interfaces elegantes, animaciones inmersivas y un robusto desarrollo full-stack.",
+    aboutText: "INFINITY LABS es un estudio creativo digital moderno fundado por Saif Holsekar, especializado en construir sitios web interactivos de alto rendimiento y experiencias digitales escalables para empresas emergentes, corporaciones y marcas en crecimiento. Unimos interfaces elegantes, animaciones inmersivas y un robusto desarrollo full-stack.",
     teamTitle: "COMPOSICIÓN DEL EQUIPO",
     teamDesc: "Somos una fuerza de 4 expertos que integra 3 desarrolladores de software y 1 publicista estratégico de redes sociales, fusionando diseño de vanguardia con campañas orientadas a resultados.",
     philosophyTitle: "FILOSOFÍA DEL ESTUDIO",
