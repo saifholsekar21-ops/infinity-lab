@@ -101,3 +101,64 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
   background: #3A3A3A;
 }
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Reset CSS variables for print to ensure legibility */
+  :root, :root.light {
+    --bg-color: #FFFFFF;
+    --text-color: #000000;
+    --text-muted: #333333;
+    --glass-bg: transparent;
+    --glass-border: #CCCCCC;
+    --hero-gradient-start: #000000;
+    --hero-gradient-end: #000000;
+  }
+
+  .glass-card {
+    background: white !important;
+    border: 1px solid #ddd !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .hero-heading {
+    background: none !important;
+    -webkit-text-fill-color: black !important;
+    color: black !important;
+  }
+
+  /* Hide interactive/decorative elements */
+  button, 
+  .marquee-strip,
+  ::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  /* Ensure text is black and readable */
+  * {
+    text-shadow: none !important;
+    color: #000 !important;
+  }
+
+  /* Avoid page breaks inside sections */
+  section,
+  .glass-card,
+  article {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 2rem !important;
+  }
+
+  /* Improve layout for printing */
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}

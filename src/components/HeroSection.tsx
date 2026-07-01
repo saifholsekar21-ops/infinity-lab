@@ -34,15 +34,6 @@ export default function HeroSection({ onContactClick, onNavClick }: HeroSectionP
         className="w-full flex justify-between items-center px-6 md:px-10 pt-6 md:pt-8 z-30"
       >
         <div className="w-full flex justify-between items-center gap-4">
-          <motion.div 
-            className="flex items-center"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          >
-            <img src="/logo.png" alt="Infinity Labs Logo" className="h-10 w-10 md:h-14 md:w-14 rounded-full object-cover mr-6" />
-          </motion.div>
-
           {/* Nav links */}
           <div className="flex flex-wrap gap-4 sm:gap-8 md:gap-12 flex-1 justify-center md:justify-start">
             <button
@@ -128,15 +119,16 @@ export default function HeroSection({ onContactClick, onNavClick }: HeroSectionP
             {/* Sleek Language Switcher */}
             <button
               onClick={toggleLanguage}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full border transition-all duration-300 text-[10px] sm:text-xs font-semibold uppercase tracking-widest cursor-pointer ${
+              title={`Switch to ${language === "EN" ? "Spanish" : "English"}`}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full border transition-all duration-300 text-[10px] sm:text-xs font-semibold uppercase tracking-widest cursor-pointer hover:scale-105 active:scale-95 ${
                 theme === "dark"
                   ? "border-white/10 bg-white/5 text-[#D7E2EA] hover:bg-white/10 hover:border-white/20"
                   : "border-black/10 bg-black/5 text-[#121824] hover:bg-black/10 hover:border-black/20"
               }`}
             >
-              <span className={language === "EN" ? (theme === "dark" ? "text-white font-black" : "text-black font-black") : (theme === "dark" ? "text-white/40" : "text-black/40")}>EN</span>
+              <span className={`transition-colors duration-300 ${language === "EN" ? (theme === "dark" ? "text-white font-black" : "text-black font-black") : (theme === "dark" ? "text-white/40" : "text-black/40")}`}>EN</span>
               <span className={theme === "dark" ? "text-white/20 font-light" : "text-black/20 font-light"}>|</span>
-              <span className={language === "ES" ? (theme === "dark" ? "text-white font-black" : "text-black font-black") : (theme === "dark" ? "text-white/40" : "text-black/40")}>ES</span>
+              <span className={`transition-colors duration-300 ${language === "ES" ? (theme === "dark" ? "text-white font-black" : "text-black font-black") : (theme === "dark" ? "text-white/40" : "text-black/40")}`}>ES</span>
             </button>
           </div>
         </div>
